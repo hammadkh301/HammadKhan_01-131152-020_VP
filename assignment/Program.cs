@@ -12,9 +12,9 @@ namespace assignment
     {
         static void Main(string[] args)
         {
-           //string filepath="C:\\Users\\hamma\\Desktop\\students.txt";
-            //string []arg =new string [0];
-            //arg[0]=filepath;
+           string filepath="C:\\Users\\hamma\\Desktop\\students.txt";
+            string []arg =new string [0];
+            arg[0]=filepath;
             char ch;
            do
            {
