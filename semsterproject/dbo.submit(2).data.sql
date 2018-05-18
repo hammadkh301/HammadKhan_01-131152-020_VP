@@ -1,0 +1,1 @@
+﻿Select submit.sa,answer.ans from answer INNER JOIN(SELECT TOP 1 sa From submit order by ID DESC)AS submit ON Submit.sa=answer.ans"
