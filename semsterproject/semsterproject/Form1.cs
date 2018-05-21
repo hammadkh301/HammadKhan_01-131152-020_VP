@@ -47,5 +47,10 @@ namespace semsterproject
             obj.Hide();
             obj.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+          this.Close();
+        }
     }
 }

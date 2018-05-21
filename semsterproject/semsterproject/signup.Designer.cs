@@ -40,6 +40,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.lastname = new System.Windows.Forms.TextBox();
             this.firstname = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -143,12 +144,23 @@
             this.firstname.TabIndex = 1;
             this.firstname.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Back";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(669, 386);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.id);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
@@ -182,5 +194,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox lastname;
         private System.Windows.Forms.TextBox firstname;
+        private System.Windows.Forms.Button button3;
     }
 }

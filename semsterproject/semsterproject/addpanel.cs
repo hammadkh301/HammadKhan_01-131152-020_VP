@@ -29,5 +29,11 @@ namespace semsterproject
             Ok obj = new Ok();
             obj.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Studentlogin obj = new Studentlogin();
+            obj.Show();
+        }
     }
 }

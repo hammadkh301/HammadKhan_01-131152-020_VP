@@ -15,12 +15,19 @@ namespace semsterproject
         public Exam()
         {
             InitializeComponent();
+            Random randomizer = new Random();
         }
+        score1 obj1 = new score1();
         private DataTable data = null;
         private int currentRecord = 0;
+        public int x;
         string correct;
+        string select;
+        public int value=0;
+        public string pass;
         private void Exam_Load(object sender, EventArgs e)
         {
+          obj1.label2.Text = value.ToString();
             string constr = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\hamma\Documents\quizapplication.mdf;Integrated Security=True;Connect Timeout=30";
             using (SqlConnection con1 = new SqlConnection(constr))
             using (SqlCommand cmd = new SqlCommand("select * from addquestion1", con1))
@@ -34,27 +41,106 @@ namespace semsterproject
                 displayrecord();
             }
         }
-             public void displayrecord()
+         public void displayrecord()
         {
-            textBox1.Text = String.Format("{0}", data.Rows[currentRecord][0]);
-            radioButton1.Text = String.Format("{0}", data.Rows[currentRecord][1]);
-            radioButton2.Text = String.Format("{0}", data.Rows[currentRecord][2]);
-            radioButton3.Text = String.Format("{0}", data.Rows[currentRecord][3]);
-            radioButton4.Text = String.Format("{0}", data.Rows[currentRecord][4]);
-                 textBox1.Text=string.Format("{0}",data.Rows[currentRecord][5]);
+            
+                textBox1.Text = String.Format("{0}", data.Rows[currentRecord][0]);
+                radioButton1.Text = String.Format("{0}", data.Rows[currentRecord][1]);
+                radioButton2.Text = String.Format("{0}", data.Rows[currentRecord][2]);
+                radioButton3.Text = String.Format("{0}", data.Rows[currentRecord][3]);
+                radioButton4.Text = String.Format("{0}", data.Rows[currentRecord][4]);
+                correct = String.Format("{0}", data.Rows[currentRecord][5]);
+       
+          
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked = true)
+            if(radioButton1.Checked==true)
             {
+                select = radioButton1.Text;
+            }
+            else if (radioButton2.Checked == true)
+            {
+                select = radioButton2.Text;
+            }
+            else if (radioButton3.Checked == true)
+            {
+                select = radioButton3.Text;
+            }
+            else if (radioButton4.Checked == true)
+            {
+                select = radioButton4.Text;
+            }
+            else
+            {
+                MessageBox.Show("please select any option");
+            }
+            if (select.Equals(correct))
+            {
+                value++;
+                obj1.label2.Text = value.ToString();
+
 
             }
-         if (currentRecord >= data.Rows.Count - 1)
-                currentRecord = 0;
+
+                if (currentRecord >= data.Rows.Count - 1)
+                {
+                    currentRecord = 0;
+                    MessageBox.Show("quiz is over");
+                    button1.Enabled = false;
+                    obj1.Show();
+                    obj1.label2.Text =value.ToString();
+                }
+                else
+                {
+                    currentRecord++;
+                    displayrecord();
+                }
+            }
+           
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled=true;
+            timer1.Start();
+            string constr = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\hamma\Documents\quizapplication.mdf;Integrated Security=True;Connect Timeout=30";
+            using (SqlConnection con1 = new SqlConnection(constr))
+            using (SqlCommand cmd = new SqlCommand("select * from addquestion1", con1))
+            {
+                con1.Open();
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    data = new DataTable();
+                    da.Fill(data);
+                }
+                displayrecord();
+            }
+        }
+        int timeRemaining =  1* 60;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+             if (timeRemaining == 0)
+            {
+                timer1.Stop();
+                MessageBox.Show("Sorry Time is up");
+                obj1.Show();
+                obj1.label2.Text = value.ToString();
+            }
             else
-                currentRecord++;
-            displayrecord();
+                timeRemaining--;
+                textBox2.Text = (timeRemaining / 60).ToString("00") +":"+(timeRemaining % 60).ToString("00");
+            }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
         }
     }
+        

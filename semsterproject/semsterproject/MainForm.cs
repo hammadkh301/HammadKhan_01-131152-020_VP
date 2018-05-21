@@ -31,12 +31,38 @@ namespace semsterproject
 
         private void button4_Click(object sender, EventArgs e)
         {
-           
+            addquestion obj = new addquestion();
+            obj.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-         
+            Exam obj = new Exam();
+            obj.Show();
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            updatequestion obj = new updatequestion();
+            obj.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Viewquestions obj = new Viewquestions();
+            obj.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            deletequestion obj = new deletequestion();
+            obj.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

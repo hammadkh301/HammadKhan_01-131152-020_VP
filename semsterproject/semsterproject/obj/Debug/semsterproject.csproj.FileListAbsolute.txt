@@ -13,3 +13,10 @@ C:\Users\hamma\documents\visual studio 2013\Projects\semsterproject\semsterproje
 C:\Users\hamma\documents\visual studio 2013\Projects\semsterproject\semsterproject\obj\Debug\semsterproject.addquestion.resources
 C:\Users\hamma\documents\visual studio 2013\Projects\semsterproject\semsterproject\obj\Debug\semsterproject.Exam.resources
 C:\Users\hamma\documents\visual studio 2013\Projects\semsterproject\semsterproject\obj\Debug\semsterproject.addpanel.resources
+C:\Users\hamma\documents\visual studio 2013\Projects\semsterproject\semsterproject\obj\Debug\semsterproject.Studentlogin.resources
+C:\Users\hamma\documents\visual studio 2013\Projects\semsterproject\semsterproject\obj\Debug\semsterproject.StudentRegisteration.resources
+C:\Users\hamma\documents\visual studio 2013\Projects\semsterproject\semsterproject\obj\Debug\semsterproject.StudentExam.resources
+C:\Users\hamma\documents\visual studio 2013\Projects\semsterproject\semsterproject\obj\Debug\semsterproject.score1.resources
+C:\Users\hamma\documents\visual studio 2013\Projects\semsterproject\semsterproject\obj\Debug\semsterproject.Viewquestions.resources
+C:\Users\hamma\documents\visual studio 2013\Projects\semsterproject\semsterproject\obj\Debug\semsterproject.deletequestion.resources
+C:\Users\hamma\documents\visual studio 2013\Projects\semsterproject\semsterproject\obj\Debug\semsterproject.updatequestion.resources

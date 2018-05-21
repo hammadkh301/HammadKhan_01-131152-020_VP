@@ -16,7 +16,7 @@ namespace semsterproject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Ok());
+            Application.Run(new addpanel());
         }
     }
 }
